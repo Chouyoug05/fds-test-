@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" href="data:," />
+    <title>FDS — Front Démocratique Socialiste | Pour un Gabon juste, libre et prospère</title>
+    <meta name="description" content="Site officiel du Front Démocratique Socialiste (FDS) — Pour un Gabon juste, libre et prospère. Respect, Intégrité, Loyauté." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/fds.css" />
+  </head>
+  <body>
+    <header>
+      <div class="conteneur nav">
+        <a class="marque" href="#accueil" aria-label="FDS — retour à l'accueil">
+          <span class="logo"><img src="images/img-86123ef330f5.png" alt="Logo du FDS" /></span>
+          <span class="nom">
+            <strong>FDS</strong>
+            <small>Front Démocratique Socialiste</small>
+          </span>
+        </a>
+        <nav class="liens" aria-label="Navigation principale">
+          <a href="#accueil" data-route="accueil">Accueil</a>
+          <div class="deroulant">
+            <button class="declencheur" type="button" aria-haspopup="true" aria-expanded="false">Le Parti <span class="chev" aria-hidden="true">▾</span></button>
+            <div class="panneau">
+              <a href="#parti" data-ancre="histoire">Histoire</a>
+              <a href="#parti" data-ancre="mission">Mission</a>
+              <a href="#parti" data-ancre="valeurs">Valeurs</a>
+              <a href="#parti" data-ancre="organisation">Organisation</a>
+              <a href="#poles">Les six pôles</a>
+            </div>
+          </div>
+          <a href="#poles" data-route="poles">Nos Pôles</a>
+          <a href="#publications" data-route="publications">Publications</a>
+          <div class="deroulant">
+            <button class="declencheur" type="button" aria-haspopup="true" aria-expanded="false">Nos Bureaux <span class="chev" aria-hidden="true">▾</span></button>
+            <div class="panneau">
+              <a href="#bureaux">Tous les bureaux</a>
+              <a href="#bureau" data-bureau="gabon">Bureau national — Gabon</a>
+              <a href="#bureau" data-bureau="france">FDS France</a>
+              <a href="#bureau" data-bureau="senegal">FDS Sénégal</a>
+              <a href="#bureau" data-bureau="diaspora">FDS Diaspora</a>
+            </div>
+          </div>
+          <a href="#auth" data-vue="connexion">Espace Membre</a>
+          <a class="btn btn-jaune btn-nav" href="#auth" data-vue="inscription">Adhérer</a>
+        </nav>
+        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menuMobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="menu-mobile" id="menuMobile">
+        <a href="#accueil">Accueil</a>
+        <div class="groupe">
+          <button class="groupe-titre" type="button" aria-expanded="false">Le Parti <span class="chev" aria-hidden="true">▾</span></button>
+          <div class="groupe-liens">
+            <a class="sous" href="#parti" data-ancre="histoire">Histoire</a>
+            <a class="sous" href="#parti" data-ancre="mission">Mission</a>
+            <a class="sous" href="#parti" data-ancre="valeurs">Valeurs</a>
+            <a class="sous" href="#parti" data-ancre="organisation">Organisation</a>
+            <a class="sous" href="#poles">Les six pôles</a>
+          </div>
+        </div>
+        <a href="#poles">Nos Pôles</a>
+        <a href="#publications">Publications</a>
+        <a href="#activites">Activités</a>
+        <a href="#diaspora">Diaspora</a>
+        <div class="groupe">
+          <button class="groupe-titre" type="button" aria-expanded="false">Nos Bureaux <span class="chev" aria-hidden="true">▾</span></button>
+          <div class="groupe-liens">
+            <a class="sous" href="#bureaux">Tous les bureaux</a>
+            <a class="sous" href="#bureau" data-bureau="gabon">Bureau national — Gabon</a>
+            <a class="sous" href="#bureau" data-bureau="france">FDS France</a>
+            <a class="sous" href="#bureau" data-bureau="senegal">FDS Sénégal</a>
+            <a class="sous" href="#bureau" data-bureau="diaspora">FDS Diaspora</a>
+          </div>
+        </div>
+        <a href="#auth" data-vue="connexion">Espace Membre</a>
+        <a class="btn btn-jaune" href="#auth" data-vue="inscription">Adhérer au FDS</a>
+      </div>
+    </header>
+
+    <div class="barre-tableau" id="barreTableau">
+      <div class="conteneur nav">
+        <a class="marque" href="#accueil" aria-label="Retour a l'accueil du FDS">
+          <span class="nom"><strong>FDS</strong><small>Tableau de bord</small></span>
+        </a>
+        <span class="titre-barre" id="titreTableau">Espace membre</span>
+        <a class="btn btn-contour btn-nav" href="#accueil">Retour au site</a>
+        <button class="btn btn-jaune btn-nav" type="button" id="btnQuitterTableau" hidden>Se d&eacute;connecter</button>
+      </div>
+    </div>
+    <main>
+      <!-- ================= PAGE ACCUEIL ================= -->
+      <div class="page" id="page-accueil">
+        <section class="hero" style="padding:0">
+          <img class="fond" src="images/img-abdd9ce6ad34.webp" alt="Cinq jeunes Gabonais en chemises blanches, souriants, sur fond bleu nuit" />
+          <div class="voile"></div>
+          <div class="conteneur">
+            <div class="contenu">
+              <p class="sur-titre">Front Démocratique Socialiste</p>
+              <h1>Pour un Gabon <span class="jaune">juste</span>, libre et prospère</h1>
+              <p class="lead">Le FDS rassemble les Gabonaises et les Gabonais qui veulent bâtir un pays où le travail est reconnu, où la jeunesse a sa place et où les institutions servent le peuple.</p>
+              <div class="actions">
+                <a class="btn btn-jaune" href="#auth" data-vue="inscription">Rejoins le FDS</a>
+                <a class="btn btn-contour" href="#poles">Découvrir nos pôles</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="devise" aria-label="Devise du FDS">
+          <div class="conteneur">
+            <span class="mot">Respect</span>
+            <span class="mot">Intégrité</span>
+            <span class="mot">Loyauté</span>
+          </div>
+        </div>
+
+        <section class="service" aria-label="Un parti au service du peuple gabonais">
+          <img class="fond" src="images/img-a94575657c3d.jpg" alt="Scène de marché : femmes entourées de paniers de produits locaux" loading="lazy" />
+          <div class="voile"></div>
+          <div class="conteneur">
+            <div class="contenu">
+              <h2>Un parti au service du <span class="jaune">peuple gabonais</span></h2>
+              <p>Le FDS est né d'une conviction simple : la politique doit partir du quotidien des Gabonais — du marché, de l'école, de l'hôpital, du quartier — et y revenir avec des réponses concrètes.</p>
+              <ul class="engagements">
+                <li><span class="coche">✓</span> À l'écoute des quartiers, des villages et de la diaspora</li>
+                <li><span class="coche">✓</span> La jeunesse au centre de l'action et des décisions</li>
+                <li><span class="coche">✓</span> Des comptes rendus réguliers rendus aux citoyens</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="president">
+          <div class="conteneur">
+            <div class="entete-section">
+              <p class="sur-titre">Le mot du président</p>
+              <h2>Le message du président du parti</h2>
+            </div>
+            <div class="carte-mot">
+              <figure class="photo-president">
+                <img src="images/president.jpg" alt="Photo du président du Front Démocratique Socialiste" onerror="this.onerror=null;this.src='images/img-86123ef330f5.png';this.classList.add('sans-photo');" />
+              </figure>
+              <div>
+                <span class="guillemet" aria-hidden="true">«</span>
+                <blockquote>
+                  <p>Gabonaises, Gabonais, chers compatriotes de la diaspora,</p>
+                  <p>Le Front Démocratique Socialiste est né d'une certitude : notre pays ne se relèvera que par l'union de toutes ses forces — celles des quartiers et des villages, celles des jeunes qui entreprennent, et celles de nos compatriotes partis au loin sans jamais rompre le lien avec la terre natale.</p>
+                  <p>À chacune et chacun d'entre vous, je le dis : votre place est ici, dans ce combat pacifique et démocratique pour un Gabon juste, libre et prospère. Rejoignez votre bureau, engagez-vous dans un pôle, et construisons ensemble le pays que nous devons à nos enfants.</p>
+                </blockquote>
+                <div class="signature">
+                  <span class="embleme"><img src="images/img-86123ef330f5.png" alt="" /></span>
+                  <span>
+                    <strong>Le Président</strong>
+                    <span>Front Démocratique Socialiste</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="chiffres">
+          <div class="conteneur">
+            <div class="entete-section">
+              <p class="sur-titre">Présence internationale</p>
+              <h2>Le FDS en chiffres</h2>
+              <p>Du Gabon à la diaspora, le parti grandit chaque semaine : des bureaux ouverts, six pôles au travail et une parole qui circule.</p>
+            </div>
+            <div class="grille-chiffres">
+              <div class="chiffre"><div class="n">3</div><div class="l">Pays</div></div>
+              <div class="chiffre"><div class="n">3</div><div class="l">Bureaux</div></div>
+              <div class="chiffre"><div class="n">6</div><div class="l">Pôles d'action</div></div>
+              <div class="chiffre"><div class="n">5</div><div class="l">Événements</div></div>
+              <div class="chiffre"><div class="n">5</div><div class="l">Publications</div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="explorer">
+          <div class="conteneur">
+            <div class="entete-section">
+              <p class="sur-titre">La vie du parti</p>
+              <h2>Explorer le FDS</h2>
+              <p>Nos bureaux, nos publications, nos activités sur le terrain et le lien avec la diaspora : chaque page du site t'emmène au cœur du parti.</p>
+            </div>
+            <div class="tuiles">
+              <a class="tuile" href="#bureaux">
+                <img src="images/img-a183fca8dfcc.jpg" alt="Bâtiment moderne aux façades vitrées sous un ciel bleu" loading="lazy" />
+                <div class="voile"></div>
+                <div class="texte">
+                  <h3>Nos bureaux <span class="fleche">→</span></h3>
+                  <p>Le FDS près de chez toi : retrouve nos bureaux et nos équipes locales, au Gabon comme à l'étranger.</p>
+                </div>
+              </a>
+              <a class="tuile" href="#diaspora">
+                <img src="images/img-94c3572d412e.jpg" alt="Illustration de la diaspora gabonaise à travers le monde" loading="lazy" />
+                <div class="voile"></div>
+                <div class="texte">
+                  <h3>Diaspora <span class="fleche">→</span></h3>
+                  <p>Où que tu vives, garde le lien avec le Gabon et prépare ton retour avec le pôle Diaspora.</p>
+                </div>
+              </a>
+              <a class="tuile" href="#publications">
+                <img src="images/img-1e8efa9e5afb.jpg" alt="Illustration des publications du FDS" loading="lazy" />
+                <div class="voile"></div>
+                <div class="texte">
+                  <h3>Publications <span class="fleche">→</span></h3>
+                  <p>Communiqués, discours et documents officiels : la parole du parti, en toute transparence.</p>
+                </div>
+              </a>
+              <a class="tuile" href="#activites">
+                <img src="images/img-24376816ff34.jpg" alt="Illustration des activités du FDS sur le terrain" loading="lazy" />
+                <div class="voile"></div>
+                <div class="texte">
+                  <h3>Activités <span class="fleche">→</span></h3>
+                  <p>Rencontres, campagnes et actions de terrain, partout au Gabon, toute l'année.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="suivre">
+          <div class="conteneur">
+            <div class="entete-section">
+              <p class="sur-titre">Restons connectés</p>
+              <h2>Suivre le FDS</h2>
+              <p>Retrouve le parti sur les réseaux sociaux, et rejoins la chaîne WhatsApp officielle pour recevoir les communiqués et les rendez-vous du FDS.</p>
+            </div>
+            <div class="reseaux">
+              <a class="reseau" href="#" data-inactif aria-label="Le FDS sur X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644Z"/></svg>
+                <span>X</span>
+              </a>
+              <a class="reseau" href="#" data-inactif aria-label="Le FDS sur LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a class="reseau" href="#" data-inactif aria-label="Le FDS sur Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none"/></svg>
+                <span>Instagram</span>
+              </a>
+              <a class="reseau" href="#" data-inactif aria-label="Le FDS sur YouTube">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                <span>YouTube</span>
+              </a>
+              <a class="reseau whatsapp" href="#" data-inactif aria-label="La chaîne WhatsApp officielle du FDS">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                <span>Chaîne WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= PAGE LE PARTI ================= -->
+      <div class="page" id="page-parti">
+        <div class="page-head">
+          <div class="conteneur">
+            <a class="btn-retour" href="#accueil">&#8592; Retour</a>
+            <p class="sur-titre">Le Parti</p>
+            <h1>Le Front Démocratique Socialiste</h1>
+            <p>Notre histoire, notre mission, nos valeurs et notre organisation : tout ce qui fait le FDS, un parti au service du peuple gabonais.</p>
+          </div>
+        </div>
+        <section style="padding-top:48px">
+          <div class="conteneur">
+            <div class="bloc" id="histoire">
+              <h2>Notre histoire</h2>
+              <p>Le Front Démocratique Socialiste est né de la rencontre de Gabonaises et de Gabonais — au pays comme dans la diaspora — convaincus que la politique doit recommencer par le peuple : écouter avant de décider, servir avant de diriger.</p>
+              <p>De cette conviction est né un parti rassembleur, qui grandit bureau après bureau, quartier après quartier, autour d'une devise simple : Respect, Intégrité, Loyauté.</p>
+            </div>
+            <div class="bloc" id="mission">
+              <h2>Notre mission</h2>
+              <p>Bâtir un Gabon juste, libre et prospère, où chaque citoyen compte et où les institutions travaillent pour le peuple. Trois chantiers guident notre action au quotidien :</p>
+              <div class="valeurs">
+                <article class="valeur">
+                  <span class="num">01</span>
+                  <h3>Rassembler</h3>
+                  <p>Réunir les Gabonais de toutes les provinces et de la diaspora autour d'un projet commun, au-delà des différences.</p>
+                </article>
+                <article class="valeur">
+                  <span class="num">02</span>
+                  <h3>Écouter et proposer</h3>
+                  <p>Partir du quotidien des familles — emploi, école, santé, pouvoir d'achat — pour construire des propositions concrètes.</p>
+                </article>
+                <article class="valeur">
+                  <span class="num">03</span>
+                  <h3>Rendre des comptes</h3>
+                  <p>Agir en transparence et revenir régulièrement devant les citoyens pour expliquer, écouter et corriger.</p>
+                </article>
+              </div>
+            </div>
+            <div class="bloc" id="valeurs">
+              <h2>Nos valeurs</h2>
+              <p>La devise du FDS n'est pas un slogan : c'est la règle de conduite de chaque militant, de chaque élu, de chaque responsable du parti.</p>
+              <div class="valeurs">
+                <article class="valeur">
+                  <span class="num">01</span>
+                  <h3>Respect</h3>
+                  <p>Respect de chaque personne, de chaque opinion et de la parole donnée. Le débat d'idées fait la force d'un parti démocratique.</p>
+                </article>
+                <article class="valeur">
+                  <span class="num">02</span>
+                  <h3>Intégrité</h3>
+                  <p>La transparence dans l'action publique et dans la gestion des ressources. Servir le peuple, jamais se servir.</p>
+                </article>
+                <article class="valeur">
+                  <span class="num">03</span>
+                  <h3>Loyauté</h3>
+                  <p>Loyauté envers le peuple gabonais et envers les engagements pris devant lui, dans les villes comme dans les villages.</p>
+                </article>
+              </div>
+            </div>
+            <div class="bloc" id="organisation">
+              <h2>Notre organisation</h2>
+              <p>Le FDS s'organise pour agir partout où vivent les Gabonais : six pôles d'action thématiques, des bureaux locaux au Gabon et des bureaux dans la diaspora. Chaque membre est rattaché à un bureau et peut rejoindre le pôle de son choix.</p>
+              <div class="valeurs">
+                <article class="valeur">
+                  <h3>Les six pôles</h3>
+                  <p>Diaspora et retour, Économie, Social, Communication, Citoyenneté, Institutions : six chantiers pour agir concrètement.</p>
+                  <p style="margin-top:12px"><a href="#poles">Découvrir les pôles →</a></p>
+                </article>
+                <article class="valeur">
+                  <h3>Les bureaux</h3>
+                  <p>Un bureau national à Libreville, des équipes dans les provinces et des bureaux à l'étranger, dont FDS France et FDS Sénégal.</p>
+                  <p style="margin-top:12px"><a href="#bureaux">Voir les bureaux →</a></p>
+                </article>
+                <article class="valeur">
+                  <h3>Les membres</h3>
+                  <p>Chaque adhérent compte : crée ton compte, rejoins ton bureau local et participe aux décisions de ton pôle.</p>
+                  <p style="margin-top:12px"><a href="#auth" data-vue="inscription">Adhérer au FDS →</a></p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= PAGE NOS PÔLES ================= -->
+      <div class="page" id="page-poles">
+        <div class="page-head">
+          <div class="conteneur">
+            <a class="btn-retour" href="#accueil">&#8592; Retour</a>
+            <p class="sur-titre">Nos pôles d'action</p>
+            <h1>Six pôles pour agir partout</h1>
+            <p>Chaque pôle rassemble des militants, des experts et des citoyens autour d'un chantier précis. Choisis le tien et passe à l'action avec nous.</p>
+          </div>
+        </div>
+        <section>
+          <div class="conteneur">
+            <div class="poles">
+              <article class="pole">
+                <img src="images/img-0f077261ed3a.png" alt="Illustration : avion et carte reliés à une maison, symbole du retour au pays" loading="lazy" />
+                <div class="corps">
+                  <h3>Diaspora et retour</h3>
+                  <p>Reconnecter les Gabonais de l'étranger à la vie du pays et préparer, avec eux, un retour réussi et utile au Gabon.</p>
+                </div>
+              </article>
+              <article class="pole">
+                <img src="images/img-41e78addfe20.png" alt="Illustration : étal de marché et flèche de croissance" loading="lazy" />
+                <div class="corps">
+                  <h3>Économie</h3>
+                  <p>Soutenir l'entrepreneuriat local, l'emploi des jeunes et le pouvoir d'achat des familles gabonaises.</p>
+                </div>
+              </article>
+              <article class="pole">
+                <img src="images/img-8d150e5b1da1.png" alt="Illustration du pôle Social du FDS" loading="lazy" />
+                <div class="corps">
+                  <h3>Social</h3>
+                  <p>Défendre l'accès aux soins, à l'éducation et à des conditions de vie dignes pour chaque famille.</p>
+                </div>
+              </article>
+              <article class="pole">
+                <img src="images/img-63e3d4af4445.png" alt="Illustration du pôle Communication du FDS" loading="lazy" />
+                <div class="corps">
+                  <h3>Communication</h3>
+                  <p>Informer, écouter et porter la voix des citoyens — sur le terrain comme sur les réseaux.</p>
+                </div>
+              </article>
+              <article class="pole">
+                <img src="images/img-0bb090097889.png" alt="Illustration du pôle Citoyenneté du FDS" loading="lazy" />
+                <div class="corps">
+                  <h3>Citoyenneté</h3>
+                  <p>Promouvoir les droits, les devoirs et la participation de chaque Gabonais à la vie de la nation.</p>
+                </div>
+              </article>
+              <article class="pole">
+                <img src="images/img-79178d4c3d6e.png" alt="Illustration du pôle Institutions du FDS" loading="lazy" />
+                <div class="corps">
+                  <h3>Institutions</h3>
+                  <p>Œuvrer pour des institutions justes, transparentes et réellement au service du peuple.</p>
+                </div>
+              </article>
+            </div>
+            <p class="note-page">Un pôle te parle ? <a href="#auth" data-vue="inscription">Crée ton compte</a> et rejoins-le dès ton adhésion.</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= PAGE NOS BUREAUX ================= -->
+      <div class="page" id="page-bureaux">
+        <div class="bandeau">
+          <img src="images/img-a183fca8dfcc.jpg" alt="Bâtiment moderne aux façades vitrées sous un ciel bleu" />
+          <div class="voile"></div>
+          <div class="conteneur texte">
+            <a class="btn-retour" href="#accueil">&#8592; Retour</a>
+            <p class="sur-titre">Nos bureaux</p>
+            <h1>Le FDS près de chez toi</h1>
+            <p>Au Gabon comme à l'étranger, nos bureaux accueillent les militants, organisent la vie du parti et font le lien avec les citoyens.</p>
+          </div>
+        </div>
+        <section>
+          <div class="conteneur">
+            <div class="bureaux">
+              <article class="bureau">
+                <img class="photo" src="images/img-a183fca8dfcc.jpg" alt="Le siège national du FDS à Libreville" loading="lazy" />
+                <div class="corps">
+                  <span class="zone">Gabon — Siège national</span>
+                  <div class="titre-drapeau">
+                    <span class="drapeau" role="img" aria-label="Drapeau du Gabon"><svg viewBox="0 0 36 24" aria-hidden="true"><rect width="36" height="8" fill="#009E60"/><rect y="8" width="36" height="8" fill="#FCD116"/><rect y="16" width="36" height="8" fill="#3A75C4"/></svg></span>
+                    <h3>Bureau national</h3>
+                  </div>
+                  <p>Le bureau du Gabon est le siège national du Front Démocratique Socialiste, à Libreville. Il coordonne les activités du parti sur tout le territoire gabonais et constitue le lien entre les bureaux provinciaux, les six pôles d'action et la direction nationale.</p>
+                  <p class="contact">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+                    <a href="#" data-inactif>Écrire au bureau</a>
+                  </p>
+                  <div class="actions-carte">
+                    <a class="btn btn-jaune" href="#bureau" data-bureau="gabon">Découvrir le bureau</a>
+                    <a class="btn btn-contour" href="#auth" data-vue="inscription">Rejoindre</a>
+                  </div>
+                </div>
+              </article>
+              <article class="bureau">
+                <img class="photo" src="images/img-66fc0f6e6350.jpg" alt="Un membre du FDS France en chemise blanche sur fond bleu nuit" loading="lazy" />
+                <div class="corps">
+                  <span class="zone">Diaspora — France</span>
+                  <div class="titre-drapeau">
+                    <span class="drapeau" role="img" aria-label="Drapeau de la France"><svg viewBox="0 0 36 24" aria-hidden="true"><rect width="12" height="24" fill="#0055A4"/><rect x="12" width="12" height="24" fill="#ffffff"/><rect x="24" width="12" height="24" fill="#EF4135"/></svg></span>
+                    <h3>FDS France</h3>
+                  </div>
+                  <p>Le bureau du FDS en France rassemble les Gabonaises et les Gabonais vivant en France. Il coordonne les activités du parti sur le territoire français, anime la diaspora et constitue le lien permanent entre les membres en France et le siège national de Libreville.</p>
+                  <p class="contact">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+                    <a href="#" data-inactif>Écrire au bureau</a>
+                  </p>
+                  <div class="actions-carte">
+                    <a class="btn btn-jaune" href="#bureau" data-bureau="france">Découvrir le bureau</a>
+                    <a class="btn btn-contour" href="#auth" data-vue="inscription">Rejoindre</a>
+                  </div>
+                </div>
+              </article>
+              <article class="bureau">
+                <img class="photo" src="images/img-24376816ff34.jpg" alt="Les activités du FDS Sénégal sur le terrain" loading="lazy" />
+                <div class="corps">
+                  <span class="zone">Diaspora — Sénégal</span>
+                  <div class="titre-drapeau">
+                    <span class="drapeau" role="img" aria-label="Drapeau du Sénégal"><svg viewBox="0 0 36 24" aria-hidden="true"><rect width="12" height="24" fill="#00853F"/><rect x="12" width="12" height="24" fill="#FDEF42"/><rect x="24" width="12" height="24" fill="#E31B23"/><path d="M18 8.1l1.18 2.39 2.64.38-1.91 1.86.45 2.63L18 14.12l-2.36 1.24.45-2.63-1.91-1.86 2.64-.38z" fill="#00853F"/></svg></span>
+                    <h3>FDS Sénégal</h3>
+                  </div>
+                  <p>Le bureau du FDS au Sénégal anime la communauté gabonaise au Sénégal — étudiants, travailleurs et familles. Il coordonne les activités du parti en Afrique de l'Ouest et constitue le lien entre les membres sur place et le siège national de Libreville.</p>
+                  <p class="contact">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+                    <a href="#" data-inactif>Écrire au bureau</a>
+                  </p>
+                  <div class="actions-carte">
+                    <a class="btn btn-jaune" href="#bureau" data-bureau="senegal">Découvrir le bureau</a>
+                    <a class="btn btn-contour" href="#auth" data-vue="inscription">Rejoindre</a>
+                  </div>
+                </div>
+              </article>
+              <article class="bureau">
+                <img class="photo" src="images/img-94c3572d412e.jpg" alt="La diaspora gabonaise rassemblée à travers le monde" loading="lazy" />
+                <div class="corps">
+                  <span class="zone">Diaspora — Monde</span>
+                  <div class="titre-drapeau">
+                    <span class="drapeau" role="img" aria-label="La diaspora dans le monde"><svg viewBox="0 0 36 24" aria-hidden="true"><rect width="36" height="24" fill="#0a2a63"/><g fill="none" stroke="#ffc61a" stroke-width="1.5"><circle cx="18" cy="12" r="7.5"/><path d="M10.5 12h15M18 4.5c2 2.1 3 4.7 3 7.5s-1 5.4-3 7.5c-2-2.1-3-4.7-3-7.5s1-5.4 3-7.5z"/></g></svg></span>
+                    <h3>FDS Diaspora</h3>
+                  </div>
+                  <p>Tu vis dans un autre pays ? Le réseau FDS Diaspora te rattache au parti où que tu sois : il coordonne les membres répartis dans le monde entier et constitue leur lien avec le Gabon, en attendant l'ouverture d'un bureau dans ton pays de résidence.</p>
+                  <p class="contact">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+                    <a href="#" data-inactif>Écrire au bureau</a>
+                  </p>
+                  <div class="actions-carte">
+                    <a class="btn btn-jaune" href="#bureau" data-bureau="diaspora">Découvrir le bureau</a>
+                    <a class="btn btn-contour" href="#auth" data-vue="inscription">Rejoindre</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <p class="note-page">Tu ne trouves pas ton bureau ? <a href="#auth" data-vue="inscription">Crée ton compte</a> : le bureau le plus proche de chez toi te contactera pour finaliser ton adhésion.</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= PAGE DÉTAIL D'UN BUREAU ================= -->
+      <div class="page" id="page-bureau">
+        <div class="bandeau">
+          <img id="bureauBanniere" src="images/img-a183fca8dfcc.jpg" alt="" />
+          <div class="voile"></div>
+          <div class="conteneur texte">
+            <a class="btn-retour" href="#bureaux">&#8592; Retour aux bureaux</a>
+            <p class="sur-titre" id="bureauZone">Nos bureaux</p>
+            <div class="detail-entete">
+              <span class="drapeau" id="bureauDrapeau"></span>
+              <h1 id="bureauNom">Bureau</h1>
+            </div>
+            <p id="bureauIntro"></p>
+          </div>
+        </div>
+        <section style="padding-top:44px">
+          <div class="conteneur">
+            <div class="section-detail" style="padding-top:0">
+              <h2>Organigramme du bureau</h2>
+              <p>Les responsables qui animent ce bureau au quotidien, au service des membres et des citoyens.</p>
+              <div class="orga" id="bureauOrga"></div>
+            </div>
+            <div class="section-detail">
+              <h2>Les pôles d'action du bureau</h2>
+              <p>Les six pôles du FDS sont actifs dans ce bureau : choisis ton chantier et engage-toi avec les équipes locales.</p>
+              <div class="poles-chips">
+                <a href="#poles">Diaspora et retour</a>
+                <a href="#poles">Économie</a>
+                <a href="#poles">Social</a>
+                <a href="#poles">Communication</a>
+                <a href="#poles">Citoyenneté</a>
+                <a href="#poles">Institutions</a>
+              </div>
+            </div>
+            <div class="section-detail">
+              <h2>Actualité du bureau</h2>
+              <div class="flux" id="bureauActus"></div>
+            </div>
+            <div class="section-detail">
+              <h2>Rejoindre ce bureau</h2>
+              <p>Crée ton compte de membre : tu seras rattaché à ce bureau et un responsable local te contactera pour finaliser ton adhésion et t'accueillir dans l'équipe.</p>
+              <a class="btn btn-jaune" href="#auth" data-vue="inscription">S'inscrire et rejoindre ce bureau</a>
+              <a class="btn btn-contour" href="#bureaux" style="margin-left:10px">Tous les bureaux</a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= PAGE DIASPORA ================= -->
+      <div class="page" id="page-diaspora">
+        <div class="bandeau">
+          <img src="images/img-94c3572d412e.jpg" alt="Illustration de la diaspora gabonaise à travers le monde" />
+          <div class="voile"></div>
+          <div class="conteneur texte">
+            <a class="btn-retour" href="#accueil">&#8592; Retour</a>
+            <p class="sur-titre">Diaspora</p>
+            <h1>Où que vous soyez, le Gabon vous attend</h1>
+            <p>Étudiants, travailleurs, entrepreneurs : la diaspora gabonaise est une force pour le pays. Le FDS la rassemble et prépare, avec elle, le retour.</p>
+          </div>
+        </div>
+        <section>
+          <div class="conteneur">
+            <div class="duo">
+              <img src="images/img-0f077261ed3a.png" alt="Illustration du pôle Diaspora et retour : avion et carte reliés à une maison" loading="lazy" />
+              <div>
+                <h2>Le pôle Diaspora et retour</h2>
+                <p>Reconnecter les Gabonais de l'étranger à la vie du pays : garder le lien avec les réalités du Gabon, participer aux débats du parti depuis l'étranger et préparer, pour celles et ceux qui le souhaitent, un retour réussi et utile au pays.</p>
+                <p>Nos bureaux FDS France et FDS Sénégal animent déjà la diaspora, et le réseau FDS Diaspora accueille les membres partout ailleurs dans le monde.</p>
+                <a class="btn btn-jaune" href="#auth" data-vue="inscription">Rejoindre la diaspora FDS</a>
+                <a class="btn btn-contour" href="#bureau" data-bureau="diaspora" style="margin-left:10px">Nos bureaux à l'étranger</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= PAGE PUBLICATIONS ================= -->
+      <div class="page" id="page-publications">
+        <div class="bandeau">
+          <img src="images/img-1e8efa9e5afb.jpg" alt="Illustration des publications du FDS" />
+          <div class="voile"></div>
+          <div class="conteneur texte">
+            <a class="btn-retour" href="#accueil">&#8592; Retour</a>
+            <p class="sur-titre">Publications</p>
+            <h1>La parole du parti</h1>
+            <p>Communiqués, discours et documents officiels : tout ce que le FDS publie, en toute transparence.</p>
+          </div>
+        </div>
+        <section>
+          <div class="conteneur">
+            <div class="valeurs">
+              <article class="valeur">
+                <h3>Communiqués officiels</h3>
+                <p>Les positions et réactions officielles du FDS sur l'actualité du Gabon et la vie du parti.</p>
+              </article>
+              <article class="valeur">
+                <h3>Discours &amp; interventions</h3>
+                <p>Les prises de parole des responsables du parti, lors des rencontres, campagnes et événements publics.</p>
+              </article>
+              <article class="valeur">
+                <h3>Documents du parti</h3>
+                <p>Textes de référence, documents d'organisation et publications des six pôles d'action.</p>
+              </article>
+            </div>
+            <p class="note-page">Les premières publications du parti seront mises en ligne ici très prochainement.</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= PAGE ACTIVITÉS ================= -->
+      <div class="page" id="page-activites">
+        <div class="bandeau">
+          <img src="images/img-24376816ff34.jpg" alt="Illustration des activités du FDS sur le terrain" />
+          <div class="voile"></div>
+          <div class="conteneur texte">
+            <a class="btn-retour" href="#accueil">&#8592; Retour</a>
+            <p class="sur-titre">Activités</p>
+            <h1>Le FDS sur le terrain</h1>
+            <p>Rencontres, campagnes et actions citoyennes : le parti vit d'abord au contact des Gabonaises et des Gabonais.</p>
+          </div>
+        </div>
+        <section>
+          <div class="conteneur">
+            <div class="valeurs">
+              <article class="valeur">
+                <h3>Rencontres de terrain</h3>
+                <p>Visites de quartiers, de villages et de marchés : écouter les citoyens là où ils vivent et travaillent.</p>
+              </article>
+              <article class="valeur">
+                <h3>Campagnes citoyennes</h3>
+                <p>Inscription sur les listes électorales, sensibilisation et mobilisation : faire vivre la citoyenneté au quotidien.</p>
+              </article>
+              <article class="valeur">
+                <h3>Actions des pôles</h3>
+                <p>Chaque pôle d'action organise ses propres activités : forums, ateliers et actions solidaires, au Gabon et dans la diaspora.</p>
+              </article>
+            </div>
+            <p class="note-page">Les prochaines activités du parti seront annoncées ici. Pour y participer près de chez toi, <a href="#bureaux">retrouve ton bureau</a>.</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= PAGE ADHÉSION ================= -->
+      <div class="page" id="page-adhesion">
+        <section class="adhesion" aria-label="Adhérer au FDS">
+          <img class="fond" src="images/img-848f535bc06e.png" alt="" loading="lazy" />
+          <div class="conteneur">
+            <div class="grille">
+              <div class="pitch">
+                <a class="btn-retour" href="#accueil">&#8592; Retour</a>
+                <h2>Où que vous soyez, <span class="jaune">le Gabon vous attend</span></h2>
+                <p>Étudiant, travailleur, entrepreneur, membre de la diaspora : il y a une place pour toi au FDS. Crée ton compte de membre : un responsable de ton secteur te recontactera pour finaliser ton adhésion.</p>
+              </div>
+              <div class="formulaire etapes-carte">
+                <h3>Comment adhérer ?</h3>
+                <p>Ton adhésion commence par la création de ton compte de membre.</p>
+                <div class="etape">
+                  <span class="n">1</span>
+                  <p><strong>Crée ton compte</strong> — remplis le formulaire d'inscription avec tes informations personnelles et électorales.</p>
+                </div>
+                <div class="etape">
+                  <span class="n">2</span>
+                  <p><strong>Le bureau de ton secteur te contacte</strong> pour valider ton adhésion et t'accueillir.</p>
+                </div>
+                <div class="etape">
+                  <span class="n">3</span>
+                  <p><strong>Rejoins ton pôle d'action</strong> et participe à la vie du parti, où que tu sois.</p>
+                </div>
+                <a class="btn btn-jaune" href="#auth" data-vue="inscription">Créer mon compte</a>
+                <p class="deja">Déjà adhérent ? <a href="#auth" data-vue="connexion">Se connecter à l'espace membre</a></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= PAGE AUTHENTIFICATION ================= -->
+      <div class="page" id="page-auth">
+        <section class="membre">
+          <div class="conteneur">
+            <div class="grille">
+              <div class="visuel">
+                <img src="images/img-66fc0f6e6350.jpg" alt="Jeune membre du FDS en chemise blanche sur fond bleu nuit" loading="lazy" />
+              </div>
+              <div class="texte">
+                <a class="btn-retour" href="#accueil">&#8592; Retour</a>
+                <h2>Rejoindre le FDS</h2>
+                <p>Crée ton compte de membre pour adhérer au parti, ou connecte-toi si tu es déjà adhérent pour retrouver tes documents et la vie de ton bureau local.</p>
+                <div class="onglets" role="tablist" aria-label="Connexion ou création de compte">
+                  <button class="onglet" id="ongletConnexion" type="button" role="tab" aria-selected="false" aria-controls="panneauConnexion">Se connecter</button>
+                  <button class="onglet actif" id="ongletInscription" type="button" role="tab" aria-selected="true" aria-controls="panneauInscription">Créer un compte</button>
+                </div>
+
+                <!-- Connexion -->
+                <div class="panneau-auth" id="panneauConnexion" role="tabpanel" aria-labelledby="ongletConnexion">
+                  <form id="formConnexion" novalidate>
+                    <div class="champ">
+                      <label for="email">E-mail ou numéro de téléphone</label>
+                      <input id="email" name="email" type="text" autocomplete="username" placeholder="ton@email.com" />
+                    </div>
+                    <div class="champ">
+                      <label for="mdp">Mot de passe</label>
+                      <input id="mdp" name="mdp" type="password" autocomplete="current-password" placeholder="••••••••" />
+                    </div>
+                    <p class="erreur" id="erreurConnexion" hidden>Merci de saisir ton e-mail (ou ton téléphone) et ton mot de passe pour te connecter.</p>
+                    <button class="btn btn-jaune" type="submit">Se connecter</button>
+                    <p class="note" id="noteConnexion">Pour réinitialiser ton mot de passe, rapproche-toi de ton bureau FDS local : un responsable t'aidera à récupérer l'accès à ton compte.</p>
+                    <a class="oublie" href="#auth" id="lienOublie">Mot de passe oublié ?</a>
+                  </form>
+                  <p class="bascule">Pas encore de compte ? <button class="lien-bascule" type="button" data-vue-lien="inscription">Créer un compte</button></p>
+                </div>
+
+                <!-- Création de compte -->
+                <div class="panneau-auth actif" id="panneauInscription" role="tabpanel" aria-labelledby="ongletInscription">
+                  <form id="formInscription" novalidate>
+                    <div class="grille-champs">
+                      <div class="champ">
+                        <label for="insNom">Nom</label>
+                        <input id="insNom" name="nom" type="text" autocomplete="family-name" placeholder="Ex. : Moussavou" />
+                      </div>
+                      <div class="champ">
+                        <label for="insPrenom">Prénom</label>
+                        <input id="insPrenom" name="prenom" type="text" autocomplete="given-name" placeholder="Ex. : Nadia" />
+                      </div>
+                      <div class="champ">
+                        <label for="insGenre">Genre</label>
+                        <select id="insGenre" name="genre">
+                          <option value="">— Choisir —</option>
+                          <option>Femme</option>
+                          <option>Homme</option>
+                        </select>
+                      </div>
+                      <div class="champ">
+                        <label for="insNaissance">Date de naissance</label>
+                        <input id="insNaissance" name="naissance" type="date" autocomplete="bday" />
+                      </div>
+                      <div class="champ">
+                        <label for="insLieuNaissance">Lieu de naissance</label>
+                        <input id="insLieuNaissance" name="lieuNaissance" type="text" placeholder="Ex. : Libreville" />
+                      </div>
+                      <div class="champ">
+                        <label for="insProfession">Profession</label>
+                        <input id="insProfession" name="profession" type="text" autocomplete="organization-title" placeholder="Ex. : Enseignante" />
+                      </div>
+                      <div class="champ">
+                        <label for="insVille">Ville de résidence</label>
+                        <input id="insVille" name="ville" type="text" autocomplete="address-level2" placeholder="Ex. : Libreville" />
+                      </div>
+                      <div class="champ">
+                        <label for="insRegion">Région</label>
+                        <input id="insRegion" name="region" type="text" placeholder="Ta région, au Gabon ou dans un autre pays" />
+                      </div>
+                      <div class="champ">
+                        <label for="insPays">Pays</label>
+                        <input id="insPays" name="pays" type="text" autocomplete="country-name" value="Gabon" />
+                      </div>
+                      <div class="champ">
+                        <label for="insTel">Téléphone</label>
+                        <input id="insTel" name="telephone" type="tel" autocomplete="tel" placeholder="Ex. : +241 06 00 00 00" />
+                      </div>
+                      <div class="champ plein">
+                        <label for="insEmail">E-mail</label>
+                        <input id="insEmail" name="email" type="email" autocomplete="email" placeholder="ton@email.com" />
+                      </div>
+                      <div class="champ plein">
+                        <label for="insNip">Numéro d'identification (NIP ou équivalent)</label>
+                        <input id="insNip" name="nip" type="text" placeholder="NIP gabonais, ou le numéro utilisé dans ton pays" />
+                      </div>
+                      <div class="champ">
+                        <label for="insCirconscription">Circonscription électorale</label>
+                        <input id="insCirconscription" name="circonscription" type="text" placeholder="Ex. : 1er arrondissement, siège 1" />
+                      </div>
+                      <div class="champ">
+                        <label for="insLieuVote">Lieu de vote</label>
+                        <input id="insLieuVote" name="lieuVote" type="text" placeholder="École ou centre où tu votes" />
+                      </div>
+                      <div class="champ plein">
+                        <label for="insPhoto">Photo</label>
+                        <input id="insPhoto" name="photo" type="file" accept="image/*" />
+                        <img class="photo-apercu" id="apercuPhoto" alt="Aperçu de ta photo" />
+                      </div>
+                    </div>
+                    <p class="erreur" id="erreurInscription" hidden>Merci de remplir au minimum ton nom, ton prénom, ton téléphone et ton e-mail pour créer ton compte.</p>
+                    <button class="btn btn-jaune" type="submit">Créer mon compte</button>
+                    <div class="resultat" id="resultatInscription" role="status">
+                      <h4>Ton inscription est prête</h4>
+                      <pre id="texteInscription"></pre>
+                      <button class="btn btn-contour" type="button" id="btnCopieInscription">Copier mon inscription</button>
+                      <span class="copie-ok" id="copieOkInscription" hidden>Copiée ✓</span>
+                      <button class="btn btn-jaune" type="button" id="btnEspaceInscription" style="margin-top:12px">Accéder à mon espace membre</button>
+                    </div>
+                  </form>
+                  <p class="bascule">Déjà adhérent ? <button class="lien-bascule" type="button" data-vue-lien="connexion">Se connecter</button></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- ================= PAGE CARTE SCANNÉE ================= -->
+      <div class="page" id="page-carte">
+        <section>
+          <div class="conteneur carte-scan">
+            <a class="btn-retour" href="#accueil">&#8592; Retour</a>
+            <h1>Carte de membre</h1>
+            <div class="badge-carte" id="carteScan"></div>
+            <p class="note-page" id="carteNote"></p>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= PAGE MENTIONS LÉGALES ================= -->
+      <div class="page" id="page-mentions">
+        <div class="page-head">
+          <div class="conteneur">
+            <a class="btn-retour" href="#accueil">&#8592; Retour</a>
+            <p class="sur-titre">Informations légales</p>
+            <h1>Mentions légales</h1>
+            <p>Les informations légales du site officiel du Front Démocratique Socialiste.</p>
+          </div>
+        </div>
+        <section style="padding-top:48px">
+          <div class="conteneur">
+            <div class="bloc">
+              <h2>Éditeur du site</h2>
+              <p>Ce site est édité par le Front Démocratique Socialiste (FDS), parti politique gabonais, dont le siège national est situé à Libreville, Gabon.</p>
+              <p>Devise du parti : Respect — Intégrité — Loyauté.</p>
+            </div>
+            <div class="bloc">
+              <h2>Objet du site</h2>
+              <p>Ce site présente le parti, ses valeurs, ses six pôles d'action et ses bureaux, au Gabon comme dans la diaspora. Il permet aux sympathisants de créer un compte de membre et aux adhérents d'accéder à leur espace membre et à leur badge numérique.</p>
+            </div>
+            <div class="bloc">
+              <h2>Propriété intellectuelle</h2>
+              <p>L'ensemble des contenus de ce site — textes, visuels, emblème et logo du FDS — est la propriété du Front Démocratique Socialiste, sauf mention contraire. Toute reproduction, même partielle, sans autorisation préalable du parti est interdite.</p>
+            </div>
+            <div class="bloc">
+              <h2>Données personnelles</h2>
+              <p>Les informations recueillies via le formulaire d'adhésion (identité, coordonnées et informations électorales) servent uniquement à la gestion des membres du parti et à l'organisation de ses activités. Elles ne sont ni vendues ni cédées à des tiers. Tout membre peut demander la rectification ou la suppression de ses informations en s'adressant à son bureau FDS.</p>
+            </div>
+            <div class="bloc">
+              <h2>Contact</h2>
+              <p>Pour toute question relative à ce site ou au parti, rapproche-toi du bureau FDS le plus proche de chez toi : <a class="lien-page" href="#bureaux">voir la page Nos bureaux</a>.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div id="zoneTableaux">
+      <!-- ================= PAGE ESPACE MEMBRE ================= -->
+      <div class="page" id="page-espace">
+        <section>
+          <div class="conteneur">
+            <div class="invite-carte" id="espaceInvite">
+              <h2>Mon espace membre</h2>
+              <p>Connecte-toi pour retrouver ton badge numérique, tes informations et les actualités réservées aux membres du FDS.</p>
+              <a class="btn btn-jaune" href="#auth" data-vue="connexion">Se connecter</a>
+            </div>
+            <div id="espaceContenu" hidden>
+              <div class="bienvenue">
+                <div>
+                  <a class="btn-retour" id="retourEspace" href="#espace" hidden>&#8592; Retour &agrave; mon espace</a>
+                  <p class="sur-titre">Espace membre</p>
+                  <h2 id="bonjourNom">Bonjour</h2>
+                </div>
+                <button class="btn btn-contour" type="button" id="btnDeconnexion">Se déconnecter</button>
+              </div>
+              <div id="espaceHub">
+                <h3 class="sous-titre">Mon badge num&eacute;rique</h3>
+                <div class="badge-carte" id="badgeCarte"></div>
+                <p class="note-page">Pr&eacute;sente ce badge lors des r&eacute;unions. Le QR code ouvre ta carte d&egrave;s qu'on le scanne.</p>
+                <a class="carte-membre attente" id="carteMembre" href="#espace-infos"></a>
+                <div class="rayon-magasin">
+                  <h3 class="sous-titre">Actualit&eacute;s</h3>
+                  <div class="magasin" id="magasinActus"></div>
+                </div>
+                <div class="rayon-magasin">
+                  <h3 class="sous-titre">Offres</h3>
+                  <div class="magasin" id="magasinOffres"></div>
+                </div>
+              </div>
+              <div id="espaceVueInfos" hidden>
+                <h3 class="sous-titre">Mes informations</h3>
+                <dl class="infos" id="mesInfos"></dl>
+              </div>
+              <div id="espaceVueActus" hidden>
+                <h3 class="sous-titre">Actualit&eacute;s du parti</h3>
+                <div class="magasin" id="fluxActus"></div>
+              </div>
+              <div id="espaceVueOffres" hidden>
+                <h3 class="sous-titre">Offres &amp; avantages membres</h3>
+                <div class="magasin" id="fluxOffres"></div>
+              </div>
+              <div id="espaceVueDetail" hidden>
+                <article class="fiche-magasin" id="ficheMagasin"></article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ================= PAGE ADMINISTRATION ================= -->
+      <div class="page" id="page-admin">
+        <div id="adminInvite">
+          <section>
+            <div class="conteneur">
+              <div class="invite-carte">
+                <h2>Connexion administrateur</h2>
+                <p>L'administration du site est r&eacute;serv&eacute;e au compte administrateur du Front D&eacute;mocratique Socialiste.</p>
+                <form id="formAdmin" novalidate>
+                  <div class="champ">
+                    <label for="adminIdentifiant">Identifiant</label>
+                    <input id="adminIdentifiant" type="text" autocomplete="username" placeholder="admin@fds.ga" />
+                  </div>
+                  <div class="champ">
+                    <label for="adminMdp">Mot de passe</label>
+                    <input id="adminMdp" type="password" autocomplete="current-password" placeholder="Mot de passe" />
+                  </div>
+                  <p class="erreur" id="erreurAdmin" hidden>Identifiant ou mot de passe incorrect.</p>
+                  <button class="btn btn-jaune" type="submit">Se connecter</button>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div id="adminContenu" hidden>
+        <div class="page-head">
+          <div class="conteneur">
+            <a class="btn-retour" id="retourAdmin" href="#admin" hidden>&#8592; Retour au tableau de bord</a>
+            <p class="sur-titre">Back office</p>
+            <h1>Tableau de bord admin</h1>
+            <p>Gère les membres, les actualités et les offres affichées dans l'espace membre du FDS.</p>
+          </div>
+        </div>
+        <section style="padding-top:48px">
+          <div class="conteneur">
+            <div class="admin-grille">
+              <nav class="admin-menu" aria-label="Sections du tableau de bord">
+                <a href="#admin" data-admin="vue">Vue d'ensemble</a>
+                <a href="#admin-membres" data-admin="membres">Membres</a>
+                <a href="#admin-actus" data-admin="actus">Actualit&eacute;s</a>
+                <a href="#admin-offres" data-admin="offres">Offres</a>
+                <a href="#admin-orga" data-admin="orga">Organigrammes</a>
+              </nav>
+              <div>
+                <div class="panneau-admin actif" id="admin-vue">
+                  <h3>Vue d'ensemble</h3>
+                  <div class="stats">
+                    <div class="stat"><div class="n" id="statMembres">0</div><div class="l">Membres inscrits</div></div>
+                    <div class="stat"><div class="n">4</div><div class="l">Bureaux actifs</div></div>
+                    <div class="stat"><div class="n" id="statActus">0</div><div class="l">Actualités publiées</div></div>
+                    <div class="stat"><div class="n" id="statOffres">0</div><div class="l">Offres actives</div></div>
+                  </div>
+                  <h3>Derniers membres inscrits</h3>
+                  <div id="tableRecents"></div>
+                </div>
+                <div class="panneau-admin" id="admin-membres">
+                  <h3>Tous les membres</h3>
+                  <p class="note-page">La cotisation est de 500 FCFA. Active le compte du membre une fois qu&rsquo;elle est r&eacute;gl&eacute;e.</p>
+                  <div id="tableMembres"></div>
+                </div>
+                <div class="panneau-admin" id="admin-actus">
+                  <h3>Publier une actualité</h3>
+                  <form class="admin-form" id="formActu" novalidate>
+                    <div class="champ">
+                      <label for="actuTitre">Titre de l'actualité</label>
+                      <input id="actuTitre" type="text" placeholder="Ex. : Grande rencontre des bureaux à Libreville" />
+                    </div>
+                    <div class="champ">
+                      <label for="actuTexte">Texte</label>
+                      <textarea id="actuTexte" placeholder="Le détail de l'actualité, visible par tous les membres connectés."></textarea>
+                    </div>
+                    <button class="btn btn-jaune" type="submit">Publier l'actualité</button>
+                    <p class="admin-ok" id="okActu" hidden>Actualité publiée dans l'espace membre ✓</p>
+                  </form>
+                  <h3>Actualités en ligne</h3>
+                  <div class="admin-liste" id="listeActusAdmin"></div>
+                </div>
+                <div class="panneau-admin" id="admin-offres">
+                  <h3>Publier une offre</h3>
+                  <form class="admin-form" id="formOffre" novalidate>
+                    <div class="champ">
+                      <label for="offreTitre">Titre de l'offre</label>
+                      <input id="offreTitre" type="text" placeholder="Ex. : Formation communication pour les membres" />
+                    </div>
+                    <div class="champ">
+                      <label for="offreTexte">Description</label>
+                      <textarea id="offreTexte" placeholder="En quoi consiste l'offre, et comment les membres en profitent."></textarea>
+                    </div>
+                    <button class="btn btn-jaune" type="submit">Publier l'offre</button>
+                    <p class="admin-ok" id="okOffre" hidden>Offre publiée dans l'espace membre ✓</p>
+                  </form>
+                  <h3>Offres en ligne</h3>
+                  <div class="admin-liste" id="listeOffresAdmin"></div>
+                </div>
+                <div class="panneau-admin" id="admin-orga">
+                  <h3>Organigrammes des bureaux</h3>
+                  <form class="admin-form" id="formOrga" novalidate>
+                    <div class="champ">
+                      <label for="orgaBureau">Bureau</label>
+                      <select id="orgaBureau">
+                        <option value="gabon">Bureau national — Gabon</option>
+                        <option value="france">FDS France</option>
+                        <option value="senegal">FDS Sénégal</option>
+                        <option value="diaspora">FDS Diaspora</option>
+                      </select>
+                    </div>
+                    <div class="champ">
+                      <label for="orgaPoste">Poste</label>
+                      <input id="orgaPoste" type="text" placeholder="Ex. : Responsable Jeunesse" />
+                    </div>
+                    <div class="champ">
+                      <label for="orgaNom">Nom du responsable</label>
+                      <input id="orgaNom" type="text" placeholder="Nom et prénom (laisser vide si le poste est à pourvoir)" />
+                    </div>
+                    <button class="btn btn-jaune" type="submit">Ajouter à l'organigramme</button>
+                    <p class="admin-ok" id="okOrga" hidden>Responsable ajouté à l'organigramme ✓</p>
+                  </form>
+                  <h3>Organigrammes en ligne</h3>
+                  <div id="orgaAdminListes"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        </div>
+      </div>
+    </div>
+
+
+    <footer>
+      <div class="conteneur">
+        <div class="pied">
+          <div>
+            <a class="marque" href="#accueil">
+              <span class="logo"><img src="images/img-86123ef330f5.png" alt="Logo du FDS" /></span>
+              <span class="nom">
+                <strong>FDS</strong>
+                <small>Front Démocratique Socialiste</small>
+              </span>
+            </a>
+            <p>Un parti au service du peuple gabonais, pour un Gabon juste, libre et prospère.</p>
+            <p class="devise-pied" style="margin-top:16px">Respect — Intégrité — Loyauté</p>
+          </div>
+          <div>
+            <h4>Le parti</h4>
+            <ul>
+              <li><a href="#parti" data-ancre="valeurs">Nos valeurs</a></li>
+              <li><a href="#poles">Nos pôles d'action</a></li>
+              <li><a href="#bureaux">Nos bureaux</a></li>
+              <li><a href="#publications">Publications</a></li>
+              <li><a href="#activites">Activités</a></li>
+              <li><a href="#diaspora">Diaspora</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Rejoindre</h4>
+            <ul>
+              <li><a href="#auth" data-vue="inscription">Adhérer au FDS</a></li>
+              <li><a href="#adhesion">Comment adhérer ?</a></li>
+              <li><a href="#auth" data-vue="connexion">Espace membre</a></li>
+              <li><a href="#admin">Tableau de bord admin</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bas">
+          <span>© 2026 Front Démocratique Socialiste — Libreville, Gabon</span>
+          <span><a href="#mentions" style="color:inherit">Mentions légales</a></span>
+          <span>Le Gabon d'abord.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/qrcode.js"></script>
+    <script src="js/fds.js"></script>
+  </body>
+</html>
